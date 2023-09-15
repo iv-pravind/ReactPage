@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Components Example</title>
+  <style>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Welcome to the Dynamic Components Example Page!</h1>
+    <button id="clickMeButton" class="button">Click Me</button>
+  </div>
+  <script>
+    // Function to update the text of the button
+    function updateButtonText() {
+      var button = document.getElementById('clickMeButton');
+      button.innerHTML = 'New Text'; // Replace with your desired text
+    }
+
+    // Update the button text initially
+    updateButtonText();
+
+    // Update the button text every 2 seconds
+    setInterval(updateButtonText, 2000);
+  </script>
+</body>
+</html>
